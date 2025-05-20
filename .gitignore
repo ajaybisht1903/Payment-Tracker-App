@@ -1,0 +1,10 @@
+# Ignore the virtual environment directory
+
+# Ignore Python cache files
+_pycache_/
+# Ignore compiled Python files
+*.pyc
+# Ignore the SQLite database file (your payments database)
+*.db
+# Ignore environment files (if you add any later)
+.env
