@@ -1,0 +1,38 @@
+# Define the root widget as a ScreenManager, which allows switching between multiple screens
+# for the Login and Registration screens
+
+<MyScreenManager>:
+    LoginScreen:  # The first screen we load is LoginScreen
+
+# Define the login screen layout
+<LoginScreen>:
+    name: "login"  # This name helps the ScreenManager identify this screen for switching
+
+    BoxLayout:
+        orientation: "vertical"  # Stack all child widgets vertically (top to bottom)
+        padding: 20           # Add space around the edges of the layout
+        spacing: 20              # Add space between each widget
+
+        # App title
+        Label:
+            text: "Payment Tracker Login"  # Heading of the screen
+            font_size: 20  # Increase font size for visibility
+
+        # Username input field
+        TextInput:
+            # TextInput is a widget that allows the user to enter text
+            id: username         # Give this TextInput an ID so Python can access its text
+            hint_text: "Enter Username"  # Placeholder text when field is empty
+            multiline: False     # User can only enter one line (like a regular form)
+
+        # Password input field
+        TextInput:
+            id: password         # Same as above, for the password
+            hint_text: "Enter Password"
+            multiline: False
+            password: True       # Hide the characters (e.g., show ●●● instead)
+
+        # Login button
+        Button:
+            text: "Login"  # Text on the button
+            on_press: root.do_login()  # When clicked, call the do_login() method in Python class (LoginScreen)

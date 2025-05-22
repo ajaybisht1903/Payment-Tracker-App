@@ -1,10 +1,46 @@
-# Ignore the virtual environment directory
+# Python virtual environment
+venv/
+env/
+ENV/
+.venv/
+.pyenv/
 
-# Ignore Python cache files
-_pycache_/
-# Ignore compiled Python files
-*.pyc
-# Ignore the SQLite database file (your payments database)
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite database (optional, if you generate .db files)
 *.db
-# Ignore environment files (if you add any later)
+
+# Environment config
 .env
+*.env
+
+# Log files
+*.log
+
+# Buildozer build artifacts
+.buildozer/
+bin/
+*.apk
+
+# macOS & Linux system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# PyInstaller
+*.spec
+dist/
+build/
+
+# Pycharm
+.idea/
+
+# Packaging
+.eggs/
+*.egg-info/
+*.egg
